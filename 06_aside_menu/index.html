@@ -11,20 +11,43 @@
 <body>
     <div class="container">
         <h1>drawer menu</h1>
+
         <div class="side">
             <div class="banner"></div>
             <ul>
                 <li>Html</li>
-                <li>css</li>
-                <li>javascript</li>
-                <li>javascript</li>
-                <li>gitHub</li>
+                <li>Css</li>
+                <li>Javascript</li>
+                <li>Jquery</li>
+                <li>GitHub</li>
             </ul>
             <div class="banner"></div>
             <div class="banner"></div>
             <div class="banner"></div>
+
+            <div class="btn">
+                <img src="../images/open.png" alt="">
+            </div>
         </div>
     </div>
     
+    <script>
+        var btn = $('.btn')
+        var side = $('.side')
+
+        $('.btn').click(function(){
+            //...
+            $('.side').toggleClass('active')
+
+            if($('.side').hasClass('active')) {
+                //...
+                $(this).find('img').attr('src', '../images/close.png')
+            } else {
+                $(this).find('img').attr('src', '../images/open.png')
+                //...
+            }
+        })
+    </script>
+
 </body>
 </html>
