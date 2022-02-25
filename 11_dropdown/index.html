@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery | drop down menu</title>
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="../lib/jquery-3.6.0.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <h1>DropDown</h1>
+
+          <ul class="gnb">
+            <li>
+              <a href="#">MENU1</a>
+              <ul>
+                <li><a href="#">menu2-sub1</a></li>
+                <li><a href="#">menu2-sub1</a></li>
+                <li><a href="#">menu2-sub1</a></li>
+                <li><a href="#">menu2-sub1</a></li>
+                <li><a href="#">menu2-sub1</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#">MENU2</a>
+              <ul>
+                <li><a href="#">menu-sub2</a></li>
+                <li><a href="#">menu-sub2</a></li>
+                <li><a href="#">menu-sub2</a></li>
+                <li><a href="#">menu-sub2</a></li>
+                <li><a href="#">menu-sub2</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#">MENU3</a>
+              <ul>
+                <li><a href="#">menu-sub3</a></li>
+                <li><a href="#">menu-sub3</a></li>
+                <li><a href="#">menu-sub3</a></li>
+                <li><a href="#">menu-sub3</a></li>
+                <li><a href="#">menu-sub3</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#">MENU4</a>
+              <ul>
+                <li><a href="#">menu-sub4</a></li>
+                <li><a href="#">menu-sub4</a></li>
+                <li><a href="#">menu-sub4</a></li>
+                <li><a href="#">menu-sub4</a></li>
+                <li><a href="#">menu-sub4</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#">MENU5</a>
+              <ul>
+                <li><a href="#">menu-sub5</a></li>
+                <li><a href="#">menu-sub5</a></li>
+                <li><a href="#">menu-sub5</a></li>
+                <li><a href="#">menu-sub5</a></li>
+                <li><a href="#">menu-sub5</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="social">
+            <a href="#"><i class="xi-kakaotalk"></i></a>
+            <a href="#"><i class="xi-youtube"></i></a>
+          </div>
+        </nav>
+      </header>
+      <div class="slide">this is silde</div>
+    </div>
+
+    <script>
+      var item = $('gnb li')
+      item.hover(function () {})
+    </script>
+  </body>
+</html>
