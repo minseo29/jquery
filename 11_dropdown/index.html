@@ -84,8 +84,16 @@
     </div>
 
     <script>
-      var item = $('gnb li')
-      item.hover(function () {})
+      var item = $('.gnb li')
+
+      item.hover(
+        function () {
+          $(this).find('ul').stop().slideDown(200)
+        },
+        function () {
+          $(this).find('ul').stop().slideUp(200)
+        }
+      )
     </script>
   </body>
 </html>
