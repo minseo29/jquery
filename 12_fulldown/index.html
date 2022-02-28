@@ -48,6 +48,9 @@
                 <li><a href="#">상담센터</a></li>
                 <li><a href="#">프라이버시센터</a></li>
                 <li><a href="#">라이브러리</a></li>
+                <li><a href="#">라이브러리</a></li>
+                <li><a href="#">라이브러리</a></li>
+                <li><a href="#">라이브러리</a></li>
               </ul>
             </li>
 
@@ -73,7 +76,7 @@
             <li>
               <a href="#">채용</a>
               <ul>
-                <li><a href="#">구조채용정보</a></li>
+                <li><a href="#">채용정보</a></li>
               </ul>
             </li>
           </ul>
@@ -314,5 +317,46 @@
         </div>
       </main>
     </div>
+
+    <script>
+      //   var header = $('header')
+      //   var gnb = header.find('.gnb')
+
+      //   gnb
+      //     .on('mouseover', function () {
+      //       header.stop().animate({ height: 400 }, 300)
+      //     })
+      //     .on('mouseleave', function () {
+      //       header.stop().animate({ height: 80 }, 300)
+      //     })
+
+      //   gnb.find('ul').css('height', 400)
+
+      var header = $('header')
+      var gnb = header.find('.gnb')
+      var headerHeight = header.innerHeight()
+      var subMenuHeight = gnb.find('ul li').innerHeight()
+      var menucount = []
+      var paddingValue = 60
+
+      gnb.find('ul').each(function () {
+        var liCount = $(this).find('li').length
+        menucount.push(liCount)
+      })
+
+      var maxMenuCount = Math.max.apply(null, menucount)
+      var autoHeight =
+        subMenuHeight * maxMenuCount + headerHeight + paddingValue
+
+      gnb
+        .on('mouseover', function () {
+          header.stop().animate({ height: autoHeight }, 300)
+        })
+        .on('mouseleave', function () {
+          header.stop().animate({ height: 80 }, 300)
+        })
+
+      gnb.find('ul').css('height', autoHeight)
+    </script>
   </body>
 </html>
